@@ -589,6 +589,7 @@ order by d.rider_id,sum(o.total_amount)
 ````
 
 14.rider earnings analysis :
+
 find the number of 5-star ,4-star,3-star ratings each rider has ,
 riders recevies this rating based on delivery time ,
 if orders are delivered less than  15 minutes of orders recevied time the rider will get 5 star rating,
@@ -639,13 +640,13 @@ order by
 	rider_id,
 	ratings,
 	total_ratings desc
+---
 
-````
 15) order frequency by day :
  analyze order frequency per day in the week and 
 identify the peak day for each restaurant 
 
-``sql
+```sql
 
 SELECT *
 FROM (
@@ -667,6 +668,7 @@ ORDER BY restaurant_in_city, total_orders DESC;  -- ✅ ordering after final sel
 calculate  the total revenue gernerated by each customer over all their orders
 
 ```sql
+
 select 
 	o.customer_id,
 	c.customer_name,
@@ -677,10 +679,11 @@ on o.customer_id =c.customer_id
 group by o.customer_id ,customer_name
 
 ```
+
 17. monthly sales trends 
 identify sales trends by comparing each month's of  total sales to the previous month
 
-``sql
+```sql
 select 
 	year(order_date) as year,
 	month(order_date) as month,
@@ -692,7 +695,8 @@ group by
 order_date,
 year(order_date) 
 
-```
+````
+
 18. rider effieciency :
  evaluate rider effieciency by determining average delivery times and identifying those with the lowest and highest 
 
@@ -729,6 +733,7 @@ max(avg_time)
 from riders_time
 
 ````
+
 19. order item popularity :
  track the popularity of specific order items over time  and identify seasonal demand rises  
 
