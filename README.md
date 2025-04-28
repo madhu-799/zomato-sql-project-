@@ -1,1 +1,3 @@
-# zomato-sql-project-
+# SQL project : data analysis for Zomato 
+
+#Overiew 
